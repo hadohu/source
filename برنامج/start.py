@@ -54,7 +54,7 @@ async def _human_time_duration(seconds):
 async def start_(client: Client, message: Message):
     await message.reply_text(
         f"""✨ **Welcome {message.from_user.mention()} !**\n
-💭 [{BOT_NAME}](https://t.me/{BOT_USERNAME}) **✅ • يسمح لك بالبحث عن الموسيقي والفيديو وتشغيلها في المجموعات من خلال المحادثه الصوتيه في تليجرام**
+💭 [{BOT_NAME}](https://telegra.ph/file/0dd62ad35eb6209d4217d.jpg) **✅ • يسمح لك بالبحث عن الموسيقي والفيديو وتشغيلها في المجموعات من خلال المحادثه الصوتيه في تليجرام**
 
 💡 **اكتشف جميع أوامر الروبوت وكيفية عملها من خلال النقر على زر الأوامر »📚**
 
@@ -64,26 +64,26 @@ async def start_(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "➕ 🎞 اضَِٖـفٍُ آلٓبَٰـۄټِٖ إلٓيَ مج ـمۄعَِٰټِٖـڪ 🎞 ➕",
+                        "➕ 🎞 اضـف البـوت الي مجـموعتـك 🎞 ➕",
                         url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
                     )
                 ],
-                [InlineKeyboardButton("🎧 ڪيَفٍُيَـة آس๋͜ټِٖخدآم هذآ آلٓرۄبَٰـۄټِٖ 🎧", callback_data="cbhowtouse")],
+                [InlineKeyboardButton("🎧 ڪيفـيه استخـدام البـوت 🎧", callback_data="cbhowtouse")],
                 [
-                    InlineKeyboardButton("📚 آلٓأۄآمــر 📚", callback_data="cbcmds"),
-                    InlineKeyboardButton("👨‍💻 لٓلٓأس๋͜‏ټِٖـفٍُس๋͜‏ـآࢪآټِٖ 👩‍💻", url=f"https://t.me/{OWNER_NAME}"),
+                    InlineKeyboardButton("📚 الاوامــر 📚", callback_data="cbcmds"),
+                    InlineKeyboardButton("👨‍💻 مطــور البـوت👩‍💻", url=f"https://t.me/{OWNER_NAME}"),
                 ],
                 [
                     InlineKeyboardButton(
-                        "🎥 ج ـرۄبَٰ آلٓدعَِٰـم 🎥", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "🎥جـروب الـدعم🎥", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "📣 قٍُنـآة آلٓس๋͜‏ـۄࢪس๋͜‏  📣", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "📣 قنـاه السـورس", url=f"https://t.me/{UPDATES_CHANNEL}"
                     ),
                 ],
                 [
                     InlineKeyboardButton(
-                        "♔↯ ᴅᴇᴠ • ʙᴀʀʟᴏ ↯♔", url="https://t.me/bar_lo0o0"
+                        "مبـرمج السـورس", url="https://t.me/s_a_s_a_3li"
                     )
                 ],
             ]
@@ -125,7 +125,7 @@ async def ping_pong(client: Client, message: Message):
     start = time()
     m_reply = await message.reply_text("pinging...")
     delta_ping = time() - start
-    await m_reply.edit_text("🏓 `PONG!!`\n" f"⚡️ `{delta_ping * 1000:.3f} ms`")
+    await m_reply.edit_text("🏓 `PONG!!`\n" f"بينج `{delta_ping * 1000:.3f} ms`")
 
 
 @Client.on_message(command(["uptime", f"uptime@{BOT_USERNAME}"]) & ~filters.edited)
